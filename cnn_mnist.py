@@ -14,7 +14,7 @@ model.add(layers.MaxPooling2D((2, 2)))
 model.add(layers.Conv2D(64,(3, 3), activation='relu'))
 
 #summary model architecture
-model.summary()  #padding(x) > input size에서 filter size나눈 나머지만큼 차원축소
+model.summary()  #padding(x) 
 
 ###############convolutional layer########end################
 
@@ -51,7 +51,7 @@ model.compile(optimizer='rmsprop',
               metrics=['accuracy'])
 model.fit(train_images, train_labels, epochs=10, batch_size=128)
 
-#test data로 검증
+#test data 검증
 
 test_loss, test_acc = model.evaluate(test_images, test_labels)
 
